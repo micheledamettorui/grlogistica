@@ -1,0 +1,708 @@
+:root {
+  --azul-escuro: #00374e;
+  --vermelho: #ff0008;
+  --preto: #000000;
+  --branco: #ffffff;
+  --fundo: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* cabeçalho */
+
+.header-contatos {
+  background-color: var(--azul-escuro);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  & .contatos {
+    display: flex;
+    gap: 2rem;
+
+    & button {
+      all: unset;
+      background-color: transparent;
+      color: var(--branco);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+    & img {
+      width: 2rem;
+    }
+  }
+
+  & .redes-sociais {
+    display: flex;
+    gap: 2rem;
+
+    & img {
+      width: 3rem;
+    }
+  }
+}
+
+.header-nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & img {
+    width: 8rem;
+  }
+
+  & ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.6rem;
+
+    & a {
+      all: unset;
+      color: var(--azul-escuro);
+      cursor: pointer;
+
+      &:hover,
+      :link {
+        border-bottom: 2px solid var(--vermelho);
+      }
+
+      & a:visited,
+      a:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  button {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 1.5rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: 0.3s ease;
+    font-size: 1.6rem;
+
+    &:hover {
+      background-color: var(--azul-escuro);
+    }
+  }
+}
+
+/* hero */
+#hero {
+  position: relative;
+  background-image: url(./img/gr-logistica-hero.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 190rem;
+  height: 80rem;
+
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+
+  & p {
+    color: var(--vermelho);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  & div {
+    /* filter: blur(0.2rem); */
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & h1 {
+      font-size: 4.2rem;
+      color: var(--branco);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+
+    & h2 {
+      color: var(--branco);
+      font-weight: 400;
+    }
+  }
+}
+
+/* diferenciais */
+#diferenciais {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & div {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--fundo);
+    gap: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+
+    & h3 {
+      font-size: 1.8rem;
+    }
+
+    & img {
+      width: 4rem;
+    }
+
+    & button {
+      all: unset;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-size: 1.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--preto);
+        border: 1px solid var(--vermelho);
+      }
+    }
+  }
+}
+
+/* Sobre nós */
+#sobre-nos {
+  padding: 18rem 4rem 10rem 4rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  & .img-sobre {
+    background-image: url(./img/sobre-nos-img.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 0.5rem;
+  }
+
+  & .textos-sobre {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    & .p-sobre-nos {
+      color: var(--vermelho);
+    }
+
+    & p {
+      line-height: 1.5;
+      font-size: 1.6rem;
+    }
+    & button {
+      all: unset;
+      display: inline-block;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-size: 1.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var(--azul-escuro);
+      }
+    }
+  }
+}
+
+/* carrossel */
+#carousel {
+  background-color: var(--azul-escuro);
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+
+  & h4 {
+    color: var(--branco);
+  }
+
+  & .carousel-inner {
+    display: flex;
+    gap: 4rem;
+    transition: transform 0.5s ease;
+
+    & .carousel-item {
+      /* min-width: 100%; */
+
+      & img {
+        width: 20rem;
+        display: block;
+      }
+    }
+  }
+}
+
+/* Atuação e serviços */
+#atuacao {
+  padding: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  & .img-atuacao {
+    background-image: url(./img/atuacao-e-servico.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 0.5rem;
+    position: relative;
+
+    & .div-contatar {
+      position: absolute;
+      bottom: 5%;
+      left: -15%;
+      background-color: var(--fundo);
+      color: var(--preto);
+      padding: 2rem;
+      width: 40rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 0.5rem;
+
+      & p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+      }
+
+      & .titulo-div {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+
+      & button {
+        all: unset;
+        background-color: var(--vermelho);
+        color: var(--branco);
+        font-size: 1.6rem;
+        border: 1px solid transparent;
+        border-radius: 0.5rem;
+        padding: 1rem 2rem;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: var(--azul-escuro);
+        }
+      }
+    }
+  }
+
+  & .topicos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50rem;
+
+    & .lista-topicos {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      & img {
+        width: 9rem;
+        border-radius: 0.5rem;
+      }
+
+      & p {
+        font-size: 1.6rem;
+        margin-top: 0.8rem;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+/* Cuidado com a segurança e o manuseio */
+#seguranca {
+  background-color: var(--fundo);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  gap: 1rem;
+
+  & .titulo-seguranca {
+    color: var(--vermelho);
+  }
+
+  & .div-p-seguranca {
+    width: 80rem;
+    text-align: center;
+  }
+
+  & .container-seguranca {
+    display: flex;
+    gap: 3rem;
+    margin-top: 1rem;
+
+    & .lista-seguranca {
+      width: 20rem;
+      padding: 1.5rem;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-size: 1.8rem;
+      border-radius: 0.5rem;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+/* Trabalhe conosco */
+#trabalhe-conosco {
+  display: flex;
+  gap: 3rem;
+  padding: 10rem;
+  align-items: center;
+  justify-content: center;
+
+  & .img-trabalhe-conosco {
+    background-image: url(./img/trabalhe-conosco.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60rem;
+    height: 60rem;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+
+  & .container-formulario {
+    display: flex;
+    width: 60rem;
+    flex-direction: column;
+    gap: 1rem;
+
+    & .title-trabalhe {
+      color: var(--vermelho);
+    }
+
+    & .formulario {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      & label {
+        font-size: 1.6rem;
+      }
+
+      & input,
+      textarea {
+        padding: 0.5rem 1rem;
+        border: 1px solid #c1c1c1;
+        border-radius: 0.5rem;
+        font-family: inherit;
+      }
+    }
+    & .contatos-form {
+      display: flex;
+      gap: 1rem;
+      width: 100%;
+
+      & .formulario {
+        flex: 1;
+      }
+    }
+
+    & .btn-enviar {
+      all: unset;
+      align-self: flex-start;
+      background-color: var(--vermelho);
+      color: var(--branco);
+      font-size: 1.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var(--azul-escuro);
+      }
+    }
+  }
+}
+
+/* Blog */
+#blog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 10rem;
+  background-color: var(--azul-escuro);
+  justify-content: center;
+  align-items: center;
+
+  & .title-blog {
+    color: var(--vermelho);
+  }
+
+  & h4 {
+    color: var(--branco);
+  }
+
+  & .container-blog {
+    display: flex;
+    gap: 2rem;
+    & .container-post {
+      width: 35rem;
+
+      & img {
+        width: 100%;
+        height: 20rem;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0;
+      }
+
+      & .textos-blog {
+        background-color: var(--fundo);
+        padding: 1.5rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+
+        & h5 {
+          font-size: 1.6rem;
+          line-height: 1.3;
+        }
+
+        & p {
+          font-size: 1.2rem;
+        }
+
+        & .btn-post {
+          all: unset;
+          /* align-self: flex-start; */
+          background-color: var(--vermelho);
+          color: var(--branco);
+          font-size: 1.6rem;
+          border: 1px solid transparent;
+          border-radius: 0.5rem;
+          padding: 1rem 2rem;
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: var(--azul-escuro);
+          }
+        }
+      }
+    }
+  }
+  & .btn-blog {
+    all: unset;
+    /* align-self: flex-start; */
+    background-color: var(--vermelho);
+    color: var(--branco);
+    font-size: 1.6rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    transition: 0.3s ease;
+
+    &:hover {
+      background-color: var(--branco);
+      color: var(--vermelho);
+    }
+  }
+}
+
+/* Depoimentos */
+#depoimentos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 10rem;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    color: var(--vermelho);
+  }
+}
+
+/* Nos contate */
+.nos-contate {
+  padding: 5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  /* width: 80rem; */
+  background-color: var(--vermelho);
+
+  & .title-nos-contato {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  & form {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    & .formulario {
+      font-size: 1.6rem;
+
+      & input {
+        padding: 1rem 1rem;
+        border: 1px solid #c1c1c1;
+        border-radius: 0.5rem;
+        font-family: inherit;
+      }
+    }
+
+    & .btn-ctt-enviar {
+      all: unset;
+      align-self: flex-start;
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      font-size: 1.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: var(--fundo);
+        color: var(--azul-escuro);
+      }
+    }
+  }
+}
+
+/* Rodapé */
+footer {
+  padding: 10rem;
+  background-color: var(--azul-escuro);
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  /* align-items: self-start; */
+  color: var(--branco);
+
+  & img {
+    width: 10rem;
+    height: auto;
+  }
+
+  & .divs-rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & .title-footer {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    & hr {
+      border: 0;
+      width: 10rem;
+      height: 0.3rem; /* Espessura da linha */
+      margin: 0.2rem 0;
+      background-color: var(--vermelho);
+    }
+
+    & button {
+      all: unset;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--azul-escuro);
+      color: var(--branco);
+      font-size: 1.6rem;
+      border: 1px solid transparent;
+      border-radius: 0.5rem;
+      padding: 0.2rem 0;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--vermelho);
+      }
+
+      & img {
+        width: 1.5rem;
+      }
+    }
+
+    & a {
+      all: unset;
+      color: var(--branco);
+      cursor: pointer;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      transition: 0.3s ease;
+
+      &:hover,
+      :link {
+        color: var(--vermelho);
+      }
+
+      & a:visited,
+      a:active {
+        text-decoration: none;
+      }
+    }
+  }
+}
